@@ -112,3 +112,9 @@ The project will be evaluated out of 100 points split between two main catagorie
 
 9. Are there really no extensions? 
     >A: There are not.
+
+public class ProjectZero{
+
+	public static void main(String[] agrs){
+
+}
