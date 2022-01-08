@@ -113,8 +113,140 @@ The project will be evaluated out of 100 points split between two main catagorie
 9. Are there really no extensions? 
     >A: There are not.
 
-public class ProjectZero{
+public class Main {
 
-	public static void main(String[] agrs){
+    public static void main(String[] args) {
+
+    }
+}
+/* Not sure how to the packages work.  I thought I understood then I went to try to work with a package and got a little
+ lost.  I also tried to add an external library and thought I got something wrong.
+ So I decided to go back to some basics till I am able to ask some questions.  had an issue where I guess I created a new
+ final project and put it into a different file folder.  I was unable to add, commit, and push the new files until I found
+ where the base file was stored and moved the file now I can add, commit, and push the new project.  However, I am not sure
+ if all of my classes are supposed to be attached to the README file instructions or if they are supposed to be separated.
+ on that note I am note, sure if my classes are supposed to be one on top of another like my methods of if each class needs
+  to be a different file for each class for readability a different file is better, but for access one "page" makes more
+  sense.  Unable to add and commit this project file.*/
+public class Card {
+
+    public Card() {
+    }
+
+    public static void commonCardSayings() { // This method needs to be placed in all it's children.
+
+        System.out.println("I am the father of all Cards all Food, all Animal, and all Land cards");
+    }
+
+    public static void cardAttack () {   // This method needs to be placed in all it's children.
+
+        System.out.println("I am the attack points for cards that attack.");
+
+    }
+
+    public static void cardDefence() {  // This method needs to be placed in all it's children.
+
+        System.out.println("I am the Defence");
+    }
+
+    public static void cardType() {  // This method needs to be placed in all it's children.
+
+        System.out.println("My card type is father of all card types all Food, All Animal, and all Land card types");
+
+    }
+
+    public static void energy() {  // This method needs to be placed in all it's children.
+
+        System.out.println("I am in charge of how each card handles energy");
+
+    }
 
 }
+/* need to figure out why println won't work here.  possible that it is outside the main method.
+ possible that it is outside the correct package, then again I should be in the default package.
+ Update to why println was not working I had println outside any kind of method once I put the println in a method
+ the problem was fixed. I will need to remember what to do with all these methods, but I also know I need them to make
+ the cards.  I added the method notes to remind me how to make the children work correctly*/
+
+/* I am not entirely sure exactly what the steps are to complete this, but I do know the less I add to Cards
+less extra things I will need to do here.*/
+
+public class Food extends Card{
+
+    public Food(){
+
+        super();
+
+    }
+
+    public static void commonCardSayings() {
+
+        System.out.println("I am a food card as a food card I have effects that take place during a fight.");
+
+    }
+
+    public static void cardAttack() {
+
+        System.out.println("As a food card I do not Attack!");
+
+    }
+
+    public static void cardDefence() {
+
+        System.out.println("As a food card I have no Defence!");
+
+    }
+
+    public static void cardType() {
+
+        System.out.println("I am the father of all Food cards.");
+
+    }
+
+    public static void energy() {
+
+        System.out.println("As a Food card I do not consume energy however I might be able to add or drain energy.");
+
+    }
+}
+
+public class Animal extends Card{
+
+    public Animal() {
+
+        super();
+
+    }
+
+    public static void commonCardSaying(){
+
+        System.out.println("I am an Animal I do all the fighting my sayings will explain how to use me.");
+
+    }
+
+    public static void cardAttack() {
+
+        System.out.println("I have an Attack ability represented as a number");
+
+    }
+
+    public static void cardDefence() {
+
+        System.out.println("I have a Defence ability represented as a number");
+
+    }
+
+    public static void cardType() {
+
+        System.out.println("I am the Father of all Animal cards");
+
+    }
+
+    public static void energy() {
+
+        System.out.println("I consume energy during the fight.");
+    }
+
+}
+
+// I moved everything to my README file as a test
