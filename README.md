@@ -127,7 +127,8 @@ public class Main {
  if all of my classes are supposed to be attached to the README file instructions or if they are supposed to be separated.
  on that note I am note, sure if my classes are supposed to be one on top of another like my methods of if each class needs
   to be a different file for each class for readability a different file is better, but for access one "page" makes more
-  sense.  Unable to add and commit this project file.*/
+  sense.  Unable to add and commit this project file.  Noting that I have attempted to branch and added a package as well
+as done some small editing in notepad.*/
 public class Card {
 
     public Card() {
@@ -290,3 +291,48 @@ public class Land extends Card{
     }
     
 }
+
+public class User {
+    
+    public User() {
+        
+    }
+    
+    public static void passwordProtection() {
+        
+        System.out.println("My audience users will need to have logins passwords to view fights.");
+        
+    }
+    
+    public static void gameBoard(){
+        
+        System.out.println("My players will need a the game board to play their cards Mainly fighter or Animal cards.");
+        
+    }
+    
+    public static void subtract() {
+        
+        System.out.println("Each player plays a card and the attack numbers are subtracted from the defence numbers");
+        
+    }
+    
+    public static void addition() {
+        
+        System.out.println("Less often than subtract which will happen each play addition can happen depending on some cards");
+        
+    }
+    
+    public static void cards() {
+        
+        System.out.println("The cards are what the player use to make the fight take place.");
+        
+    }
+    
+    public static void gameRules() {
+        
+        System.out.println("The Game Master is in charge of enforcing the rules which are found in each common card sayings.");
+        
+    }
+    
+}
+
