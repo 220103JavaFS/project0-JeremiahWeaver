@@ -113,6 +113,8 @@ The project will be evaluated out of 100 points split between two main catagorie
 9. Are there really no extensions? 
     >A: There are not.
 
+package com.projectzero.jw;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -129,6 +131,9 @@ public class Main {
   to be a different file for each class for readability a different file is better, but for access one "page" makes more
   sense.  Unable to add and commit this project file.  Noting that I have attempted to branch and added a package as well
 as done some small editing in notepad.*/
+
+package com.projectzero.jw;
+
 public class Card {
 
     public Card() {
@@ -172,6 +177,8 @@ public class Card {
 /* I am not entirely sure exactly what the steps are to complete this, but I do know the less I add to Cards
 less extra things I will need to do here.*/
 
+package com.projectzero.jw;
+
 public class Food extends Card{
 
     public Food(){
@@ -210,6 +217,8 @@ public class Food extends Card{
 
     }
 }
+
+package com.projectzero.jw;
 
 public class Animal extends Card{
 
@@ -252,6 +261,8 @@ public class Animal extends Card{
 
 // I moved everything to my README file as a test
 
+package com.projectzero.jw;
+
 public class Land extends Card{
 
     public Land() {
@@ -291,6 +302,8 @@ public class Land extends Card{
     }
     
 }
+
+package com.projectzero.jw;
 
 public class User {
     
@@ -335,4 +348,45 @@ public class User {
     }
     
 }
+
+package com.projectzero.jw;
+
+public class Banana extends Food{
+
+    public Banana(){
+
+        super();
+
+    }
+    public static void commonCardSaying(){
+
+        System.out.println("Bananas are will add 3 energy to all primates.  Banana's will poison carnivores minus 3 health.  Bananas will have no affect on any other Animal.");
+        
+    }
+    
+    public static void cardAttack(){
+        
+        System.out.println("I am a Banana I have no Attack.");
+        
+    }
+    
+    public static void cardDefense(){
+        
+        System.out.println("I am a Banana I have no defense.");
+    }
+    
+    public static void cardType(){
+        
+        System.out.println("As a Banana I am a Food type Card.");
+        
+    }
+    
+    public static void energy(){
+        
+        System.out.println("I am a Banana I do not consume energy, How ever if I am consumed by a primate the primate gains 3 energy");
+    
+    }
+    
+}
+
 
