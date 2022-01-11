@@ -137,8 +137,21 @@ package com.projectzero.jw;
 public class Card {
 
     public Card() {
-    }
 
+
+        private String cardName;
+
+        private String cardType;
+
+        private String commonCardSayings;
+
+        private int cardAttack;
+
+        private int cardDefense;
+
+        private int energy;
+
+    }
     public static void commonCardSayings() { // This method needs to be placed in all it's children.
 
         System.out.println("I am the father of all Cards all Food, all Animal, and all Land cards");
@@ -179,11 +192,28 @@ less extra things I will need to do here.*/
 
 package com.projectzero.jw;
 
-public class Food extends Card{
+public class Food extends Card {
 
-    public Food(){
+    public Food() {
 
         super();
+
+    }
+
+    public Food(String cardName, String cardType, String commonCardSayings,
+                int cardAttack, int cardDefense, int energy) {
+
+    private String cardName;
+
+    private String cardType;
+
+    private String commonCardSayings;
+
+    private int cardAttack;
+
+    private int cardDefense;
+
+    private int energy;
 
     }
 
@@ -220,13 +250,30 @@ public class Food extends Card{
 
 package com.projectzero.jw;
 
-public class Animal extends Card{
+public class Animal extends Card {
 
     public Animal() {
 
         super();
 
     }
+
+    public Animal(String cardName, String cardType, String commonCardSayings,
+                  int cardAttack, int cardDefense, int energy){
+
+    private String cardName;
+
+    private String cardType;
+
+    private String commonCardSayings;
+
+    private int cardAttack;
+
+    private int cardDefense;
+
+    private int energy;
+
+}
 
     public static void commonCardSaying(){
 
@@ -256,8 +303,8 @@ public class Animal extends Card{
 
         System.out.println("I consume energy during the fight.");
     }
-
 }
+
 
 // I moved everything to my README file as a test
 
@@ -268,6 +315,23 @@ public class Land extends Card{
     public Land() {
 
         super();
+
+    }
+
+    public Land(String cardName, String cardType, String commonCardSayings,
+                int cardAttack, int cardDefense, int energy) {
+
+        private String cardName;
+
+        private String cardType;
+
+        private String commonCardSayings;
+
+        private int cardAttack;
+
+        private int cardDefense;
+
+        private int energy;
 
     }
 
@@ -298,10 +362,11 @@ public class Land extends Card{
     public static void energy() {
 
         System.out.println("I am a Land card I do not have energy and i do not affect energy.");
-        
+
     }
-    
+
 }
+
 
 package com.projectzero.jw;
 
@@ -358,44 +423,85 @@ public class Banana extends Food{
         super();
 
     }
+
+    public Banana(String cardName, String cardType, String commonCardSayings,
+                  int cardAttack, int cardDefense, int energy) {
+
+        private String cardName;
+
+        private String cardType;
+
+        private String commonCardSayings;
+
+        private int cardAttack;
+
+        private int cardDefense;
+
+        private int energy;
+
+    }
+
     public static void commonCardSaying(){
 
         System.out.println("Bananas are will add 3 energy to all primates.  Banana's will poison carnivores minus 3 health.  Bananas will have no affect on any other Animal.");
-        
+
     }
-    
+
     public static void cardAttack(){
-        
+
         System.out.println("I am a Banana I have no Attack.");
-        
+
     }
-    
+
     public static void cardDefense(){
-        
+
         System.out.println("I am a Banana I have no defense.");
     }
-    
+
     public static void cardType(){
-        
+
         System.out.println("As a Banana I am a Food type Card.");
-        
+
     }
-    
+
     public static void energy(){
-        
+
         System.out.println("I am a Banana I do not consume energy, How ever if I am consumed by a primate the primate gains 3 energy");
-    
+
     }
-    
+
 }
+/* I had set up some basic classes for that are child classes of Card Types and Card Types Food
+    is a child class of cards I may need to rethink how I set these up because as of now that is way too
+    in depeth and after the JSON turoiral it would make more sense to "Scrap" this style and just create "cards"
+    as shown in the avengers model. Update after looking at some of the code from Avengers I
+    realized that I need to make some small additions to my code.*/
+
 
 package com.projectzero.jw;
 
-public class Hay extends Food{
+public class Hay extends Food {
 
-    public Hay(){
+    public Hay() {
 
         super();
+
+    }
+
+    public Hay(String cardName, String cardType, String commonCardSayings,
+               int cardAttack, int cardDefense, int energy){
+
+    private String cardName;
+
+    private String cardType;
+
+    private String commonCardSayings;
+
+    private int cardAttack;
+
+    private int cardDefense;
+
+    private int energy;
 
     }
     public static void commonCardSaying(){
@@ -429,6 +535,7 @@ public class Hay extends Food{
 
 }
 
+
 package com.projectzero.jw;
 
 public class Carcas extends Food{
@@ -438,6 +545,24 @@ public class Carcas extends Food{
         super();
 
     }
+
+    public Carcas(String cardName, String cardType, String commonCardSayings,
+                  int cardAttack, int cardDefense, int energy) {
+
+        private String cardName;
+
+        private String cardType;
+
+        private String commonCardSayings;
+
+        private int cardAttack;
+
+        private int cardDefense;
+
+        private int energy;
+
+    }
+
     public static void commonCardSaying(){
 
         System.out.println("I am a Carcas only carnivores can eat me.  If a non carnivore eats this they die.  If a carnivore does eat this they will gain 30 defense and plus 30 attack. However if the turn on which a carnivore does eat a carcas the carnivore will be too tired to to do anything during this turn including defend.");
@@ -469,6 +594,7 @@ public class Carcas extends Food{
 
 }
 
+
 package com.projectzero.jw;
 
 public class Corn extends Food{
@@ -478,6 +604,24 @@ public class Corn extends Food{
         super();
 
     }
+
+    public Corn (String cardName, String cardType, String commonCardSayings,
+                 int cardAttack, int cardDefense, int energy) {
+
+    private String cardName;
+
+    private String cardType;
+
+    private String commonCardSayings;
+
+    private int cardAttack;
+
+    private int cardDefense;
+
+    private int energy;
+
+    }
+
     public static void commonCardSaying(){
 
         System.out.println("I am Corn flightless birds that consume me will gain plus 4 defense.  No effect to any other Animal.");
@@ -508,5 +652,6 @@ public class Corn extends Food{
     }
 
 }
+
 
 
