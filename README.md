@@ -136,20 +136,25 @@ package com.projectzero.jw;
 
 public class Card {
 
-    public Card() {
+    private String cardName;
 
+    private String commonCardSayings;
 
-        private String cardName;
+    private int cardAttack;
 
-        private String cardType;
+    private int cardDefense;
 
-        private String commonCardSayings;
+    private String cardType;
 
-        private int cardAttack;
+    private int energy;
 
-        private int cardDefense;
+    public Card(){
 
-        private int energy;
+    }
+
+    public static void cardName(){
+
+        System.out.println("Card Father");
 
     }
     public static void commonCardSayings() { // This method needs to be placed in all it's children.
@@ -185,7 +190,10 @@ public class Card {
  possible that it is outside the correct package, then again I should be in the default package.
  Update to why println was not working I had println outside any kind of method once I put the println in a method
  the problem was fixed. I will need to remember what to do with all these methods, but I also know I need them to make
- the cards.  I added the method notes to remind me how to make the children work correctly*/
+ the cards.  I added the method notes to remind me how to make the children work correctly
+ Update I realized that I had my constructors as the body to a constructor I also realized
+ in the child classes I had duplicated my constructors to both pass through and be the body
+ */
 
 /* I am not entirely sure exactly what the steps are to complete this, but I do know the less I add to Cards
 less extra things I will need to do here.*/
@@ -203,17 +211,11 @@ public class Food extends Card {
     public Food(String cardName, String cardType, String commonCardSayings,
                 int cardAttack, int cardDefense, int energy) {
 
-    private String cardName;
+    }
 
-    private String cardType;
+    public static void cardName(){
 
-    private String commonCardSayings;
-
-    private int cardAttack;
-
-    private int cardDefense;
-
-    private int energy;
+        System.out.println("Food");
 
     }
 
@@ -246,7 +248,9 @@ public class Food extends Card {
         System.out.println("As a Food card I do not consume energy however I might be able to add or drain energy.");
 
     }
+    
 }
+
 
 package com.projectzero.jw;
 
@@ -261,19 +265,13 @@ public class Animal extends Card {
     public Animal(String cardName, String cardType, String commonCardSayings,
                   int cardAttack, int cardDefense, int energy){
 
-    private String cardName;
+    }
 
-    private String cardType;
+    public static void cardName(){
 
-    private String commonCardSayings;
+        System.out.print("Animal");
 
-    private int cardAttack;
-
-    private int cardDefense;
-
-    private int energy;
-
-	}
+    }
 
     public static void commonCardSaying(){
 
@@ -305,7 +303,6 @@ public class Animal extends Card {
     }
 }
 
-
 // I moved everything to my README file as a test
 
 package com.projectzero.jw;
@@ -321,17 +318,11 @@ public class Land extends Card{
     public Land(String cardName, String cardType, String commonCardSayings,
                 int cardAttack, int cardDefense, int energy) {
 
-        private String cardName;
+    }
 
-        private String cardType;
+    public static void cardName(){
 
-        private String commonCardSayings;
-
-        private int cardAttack;
-
-        private int cardDefense;
-
-        private int energy;
+        System.out.println("Land");
 
     }
 
@@ -367,63 +358,62 @@ public class Land extends Card{
 
 }
 
-
 package com.projectzero.jw;
 
 public class User {
-    
+
+    private String passwordProtection;
+
+    private String gameBoard;
+
+    private int subtract;
+
+    private int addition;
+
+    private String cards;
+
+    private String gameRules;
+
     public User() {
 
-	private String passwordProtection;
-
-	private string gameboard;
-	
-	private int subtract;
-
-	private int addition;
-
-	private String cards;
-
-	private String gameRules;
-        
     }
-    
+
     public static void passwordProtection() {
-        
+
         System.out.println("My audience users will need to have logins passwords to view fights.");
-        
+
     }
-    
+
     public static void gameBoard(){
-        
+
         System.out.println("My players will need a the game board to play their cards Mainly fighter or Animal cards.");
-        
+
     }
-    
+
     public static void subtract() {
-        
+
         System.out.println("Each player plays a card and the attack numbers are subtracted from the defence numbers");
-        
+
     }
-    
+
     public static void addition() {
-        
+
         System.out.println("Less often than subtract which will happen each play addition can happen depending on some cards");
-        
+
     }
-    
+
     public static void cards() {
-        
+
         System.out.println("The cards are what the player use to make the fight take place.");
-        
+
     }
-    
+
     public static void gameRules() {
-        
+
         System.out.println("The Game Master is in charge of enforcing the rules which are found in each common card sayings.");
-        
+
     }
-    
+
 }
 
 package com.projectzero.jw;
@@ -439,18 +429,11 @@ public class Banana extends Food{
     public Banana(String cardName, String cardType, String commonCardSayings,
                   int cardAttack, int cardDefense, int energy) {
 
-        private String cardName;
+    }
 
-        private String cardType;
+    public static void cardName(){
 
-        private String commonCardSayings;
-
-        private int cardAttack;
-
-        private int cardDefense;
-
-        private int energy;
-
+        System.out.println("Banana");
     }
 
     public static void commonCardSaying(){
@@ -483,12 +466,12 @@ public class Banana extends Food{
     }
 
 }
+
 /* I had set up some basic classes for that are child classes of Card Types and Card Types Food
     is a child class of cards I may need to rethink how I set these up because as of now that is way too
-    in depeth and after the JSON turoiral it would make more sense to "Scrap" this style and just create "cards"
+    in depth and after the JSON tutorial it would make more sense to "Scrap" this style and just create "cards"
     as shown in the avengers model. Update after looking at some of the code from Avengers I
     realized that I need to make some small additions to my code.*/
-
 
 package com.projectzero.jw;
 
@@ -503,20 +486,13 @@ public class Hay extends Food {
     public Hay(String cardName, String cardType, String commonCardSayings,
                int cardAttack, int cardDefense, int energy){
 
-    private String cardName;
-
-    private String cardType;
-
-    private String commonCardSayings;
-
-    private int cardAttack;
-
-    private int cardDefense;
-
-    private int energy;
-
     }
 
+    public static void cardName(){
+
+        System.out.println("Hay");
+
+    }
     public static void commonCardSaying(){
 
         System.out.println("Hay will add 5 attack to all ridding Animals.  Hay will have no affect on any other Animal.");
@@ -548,7 +524,6 @@ public class Hay extends Food {
 
 }
 
-
 package com.projectzero.jw;
 
 public class Carcas extends Food{
@@ -562,17 +537,11 @@ public class Carcas extends Food{
     public Carcas(String cardName, String cardType, String commonCardSayings,
                   int cardAttack, int cardDefense, int energy) {
 
-        private String cardName;
+    }
 
-        private String cardType;
+    public static void cardName(){
 
-        private String commonCardSayings;
-
-        private int cardAttack;
-
-        private int cardDefense;
-
-        private int energy;
+        System.out.println("Carcas");
 
     }
 
@@ -606,8 +575,6 @@ public class Carcas extends Food{
     }
 
 }
-
-
 package com.projectzero.jw;
 
 public class Corn extends Food{
@@ -621,17 +588,11 @@ public class Corn extends Food{
     public Corn (String cardName, String cardType, String commonCardSayings,
                  int cardAttack, int cardDefense, int energy) {
 
-    private String cardName;
+    }
 
-    private String cardType;
+    public static void cardName(){
 
-    private String commonCardSayings;
-
-    private int cardAttack;
-
-    private int cardDefense;
-
-    private int energy;
+        System.out.println("Corn");
 
     }
 
@@ -666,5 +627,59 @@ public class Corn extends Food{
 
 }
 
+package com.projectzero.jw;
 
+public class Forrest extends Land{
 
+    public Forrest() {
+
+        super();
+
+    }
+
+    public Forrest(String cardName, String cardType, String commonCardSayings,
+                   int cardAttack, int cardDefense, int energy) {
+
+    }
+
+    public static void cardName(){
+
+        System.out.println("Forrest");
+
+    }
+
+    public static void commonCardSaying(){
+
+        System.out.println("In the Forrest Animals can hide in tree or behind trees.");
+
+    }
+
+    public static void cardAttack(){
+
+        System.out.println("I am a Forrest I do not attack.");
+
+    }
+
+    public static void cardDefence(){
+
+        System.out.println("I am a Forrest I do not have defence.");
+
+    }
+
+    public static void cardType(){
+
+        System.out.println("I as a Forrest I am a Land Type Card");
+
+    }
+
+    public static void energy(){
+
+        System.out.println("I am a Forrest I do not have energy.");
+    }
+
+}
+
+/* I noticed that in my constructors I might be having an issue.  I think it is
+as simple as the methods I am using have the same name as my supers and might just
+ need to be this.energy etc. will check after reviewing the video note from today.
+ */
