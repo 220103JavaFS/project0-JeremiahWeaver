@@ -273,7 +273,7 @@ public class Animal extends Card {
 
     private int energy;
 
-}
+	}
 
     public static void commonCardSaying(){
 
@@ -373,6 +373,18 @@ package com.projectzero.jw;
 public class User {
     
     public User() {
+
+	private String passwordProtection;
+
+	private string gameboard;
+	
+	private int subtract;
+
+	private int addition;
+
+	private String cards;
+
+	private String gameRules;
         
     }
     
@@ -504,6 +516,7 @@ public class Hay extends Food {
     private int energy;
 
     }
+
     public static void commonCardSaying(){
 
         System.out.println("Hay will add 5 attack to all ridding Animals.  Hay will have no affect on any other Animal.");
