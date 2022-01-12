@@ -132,7 +132,7 @@ public class Main {
   sense.  Unable to add and commit this project file.  Noting that I have attempted to branch and added a package as well
 as done some small editing in notepad.*/
 
-package com.projectzero.jw;
+package com.projectzero.card;
 
 public class Card {
 
@@ -198,7 +198,7 @@ public class Card {
 /* I am not entirely sure exactly what the steps are to complete this, but I do know the less I add to Cards
 less extra things I will need to do here.*/
 
-package com.projectzero.jw;
+package com.projectzero.card;
 
 public class Food extends Card {
 
@@ -252,7 +252,7 @@ public class Food extends Card {
 }
 
 
-package com.projectzero.jw;
+package com.projectzero.card;
 
 public class Animal extends Card {
 
@@ -305,7 +305,7 @@ public class Animal extends Card {
 
 // I moved everything to my README file as a test
 
-package com.projectzero.jw;
+package com.projectzero.card;
 
 public class Land extends Card{
 
@@ -358,7 +358,7 @@ public class Land extends Card{
 
 }
 
-package com.projectzero.jw;
+package com.projectzero.User;
 
 public class User {
 
@@ -416,7 +416,7 @@ public class User {
 
 }
 
-package com.projectzero.jw;
+package com.projectzero.card;
 
 public class Banana extends Food{
 
@@ -473,7 +473,7 @@ public class Banana extends Food{
     as shown in the avengers model. Update after looking at some of the code from Avengers I
     realized that I need to make some small additions to my code.*/
 
-package com.projectzero.jw;
+package com.projectzero.card;
 
 public class Hay extends Food {
 
@@ -524,7 +524,7 @@ public class Hay extends Food {
 
 }
 
-package com.projectzero.jw;
+package com.projectzero.card;
 
 public class Carcas extends Food{
 
@@ -575,7 +575,7 @@ public class Carcas extends Food{
     }
 
 }
-package com.projectzero.jw;
+package com.projectzero.card;
 
 public class Corn extends Food{
 
@@ -627,7 +627,7 @@ public class Corn extends Food{
 
 }
 
-package com.projectzero.jw;
+package com.projectzero.card;
 
 public class Forrest extends Land{
 
@@ -683,3 +683,159 @@ public class Forrest extends Land{
 as simple as the methods I am using have the same name as my supers and might just
  need to be this.energy etc. will check after reviewing the video note from today.
  */
+
+package com.projectzero.card;
+
+public class Desert extends Card {
+
+    public Desert() {
+
+        super();
+
+    }
+
+    public Desert(String cardName, String commonCardSayings, int cardAttack, int cardDefense, String cardType, int enegry){
+
+    }
+
+    public static void cardName(){
+
+        System.out.println("I am the Desert.");
+
+    }
+
+    public static void commonCardSayings(){
+
+        System.out.println("The Desert is hot and dry make sure you have enough water.");
+
+    }"
+
+    public static void cardAttack() {
+
+        System.out.println("I am the Desert in the Land cards I have no Attack.");
+
+    }
+
+    public static void cardDefense() {
+
+        System.out.println("I am the Desert in the Land card I have no Defense.");
+
+    }
+
+    public static void cardType(){
+
+        System.out.println("I am a Land card known as the Desert.");
+
+    }
+
+    public static void energy(){
+
+        System.out.println("I am the Desert I have no energy I also do not use energy.");
+
+    }
+    
+}
+
+package com.projectzero.card;
+
+public class Mountains extends Land{
+
+    public Mountains() {
+
+        super();
+    }
+
+    public Mountains(String cardName, String commonCardSayings, int cardAttack, int cardDefense, String cardType, int enegry) {
+
+    }
+
+    public static void cardName() {
+        
+        System.out.println("I am called Mountains.");
+        
+    }
+    
+    public static void commonCardSayings() {
+        
+        System.out.println("I am the Mountains and I am calling be daring to face battle here.");
+        
+    }
+    
+    public static void cardAttack(){
+        
+        System.out.println("I am the Mountains I do not attack.");
+        
+    }
+    
+    public static void cardDefense(){
+        
+        System.out.println("I am the Mountains I do not defend.");
+        
+    }
+    
+    public static void cardType(){
+        
+        System.out.println("I am the Mountains as such I am a Land card");
+        
+    }
+    
+    public static void energy() {
+        
+        System.out.println("I am the Mountains I have no need for energy.");
+        
+    }
+    
+}
+
+package com.projectzero.card;
+
+public class Jungle extends Land{
+
+    public Jungle() {
+    
+        super();
+    
+    }
+
+    public Jungle(String cardName, String commonCardSayings, int cardAttack, int cardDefense, String cardType, int energy) {
+    
+    }
+    
+    public static void cardName(){
+        
+        System.out.println("I am the Jungle");
+        
+    }
+    
+    public static void commonCardSayings() {
+        
+        System.out.println("The Jungle is dense it has large amounts of shade but in that shade many things hide.");
+        
+    }
+    
+    public static void cardAttack(){
+        
+        System.out.println("The Jungle does not attack");
+        
+    }
+    
+    public static void cardDefense(){
+        
+        System.out.println("The Jungle does not defend.");
+        
+    }
+    
+    public static void cardType(){
+        
+        System.out.println("The Jungle is a Land");
+        
+    }
+    
+    public static void energy(){
+        
+        System.out.println("The Jungle does not deal with energy.");
+        
+    }
+    
+}
+
