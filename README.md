@@ -315,8 +315,7 @@ public class Land extends Card{
 
     }
 
-    public Land(String cardName, String cardType, String commonCardSayings,
-                int cardAttack, int cardDefense, int energy) {
+    public Land(String cardName, String commonCardSayings,int cardAttack, int cardDefense, String cardType, int energy) {
 
     }
 
@@ -438,7 +437,7 @@ public class Banana extends Food{
 
     public static void commonCardSaying(){
 
-        System.out.println("Bananas are will add 3 energy to all primates.  Banana's will poison carnivores minus 3 health.  Bananas will have no affect on any other Animal.");
+        System.out.println("Bananas are will add 3 energy to all prime apes.  Banana's will poison carnivores minus 3 health.  Bananas will have no affect on any other Animal.");
 
     }
 
@@ -839,3 +838,209 @@ public class Jungle extends Land{
     
 }
 
+package com.projectzero.card;
+
+public class Lion extends Animal {
+
+    public Lion() {
+
+        super();
+    }
+
+    public Lion(String cardName, String commonCardSayings, int cardAttack, int cardDefense, String cardType, int energy) {
+
+    }
+
+    public static void cardName(){
+
+        System.out.println("Card Roars! I am a Lion");
+
+    }
+
+    public static void commonCardSayings() {
+
+        System.out.println("The great Lion can be found in many different environments. A Lion can only eat meat.");
+
+    }
+
+    public static int cardAttack(){
+
+        int Attack = 100;
+
+    }
+
+    public static int cardDefense() {
+
+        int Defense = 100;
+
+    }
+
+    public static void cardType(){
+
+        System.out.println("This Lion is an Animal card.");
+
+    }
+
+    public static int energy(){
+
+        int energy = 10;
+
+    }
+
+}
+
+package com.projectzero.card;
+
+public class Gorilla extends Animal{
+
+    public Gorilla() {
+        
+        super();
+        
+    }
+
+    public Gorilla(String cardName, String commonCardSayings, int cardAttack, int cardDefense, String cardType, int energy) {
+        
+    }
+
+    public static void cardName(){
+        
+        System.out.println("This Gorilla beats it's chest!");
+        
+    }
+    
+    public static void commonCardSayings(){
+        
+        System.out.println("A large Gorilla sits over looking a green field don't be too loud that might spook it.");
+        
+    }
+    
+    public static void cardAttack() {
+        
+        int Attack = 100;
+        
+    }
+    
+    public static void cardDefense(){
+        
+        int Defense = 25;
+        
+    }
+    
+    public static void cardType(){
+        
+        System.out.println("A Gorilla is an Animal card.");
+        
+    }
+    
+    public static void energy(){
+        
+        int energy = 3;
+        
+    }
+    
+}
+
+package com.projectzero.card;
+
+public class Horse extends Animal {
+
+    public Horse() {
+        
+        super();
+        
+    }
+
+    public Horse(String cardName, String commonCardSayings, int cardAttack, int cardDefense, String cardType, int energy) {
+        
+    }
+    
+    public static void cardName(){
+        
+        System.out.println("This is a Horse card");
+        
+    }
+    
+    public static void commonCardSayings(){
+        
+        System.out.println("A wild Horse stands free, but it can't be tamed or ridden it is only a card.");
+        
+    }
+    
+    public static void cardAttack() {
+        
+        int Attack = 15;
+        
+    }
+    
+    public static void cardDefense() {
+        
+        int Defense = 85;
+        
+    }
+    
+    public static void cardType(){
+        
+        System.out.println("A Horse is an Animal card.");
+        
+    }
+    
+    public static void energy(){
+        
+        int energy = 2;
+        
+    }
+    
+}
+
+package com.projectzero.card;
+
+public class Turkey extends Animal {
+
+    public Turkey() {
+        
+        super();
+        
+    }
+
+    public Turkey(String cardName, String commonCardSayings, int cardAttack, int cardDefense, String cardType, int energy) {
+      
+    }
+    
+    public static void cardName(){
+        
+        System.out.println("This is the Turkey");
+        
+    }
+    
+    public static void commonCardSayings(){
+        
+        System.out.println("This is the majestic Turkey it will die fast hope you can deal with that.");
+        
+    }
+    
+    public static void cardAttack(){
+        
+        int Attack = 10;
+        
+    }
+    
+    public static void cardDefense(){
+        
+        int Defense = 10;
+        
+    }
+    
+    public static void cardType(){
+        
+        System.out.println("The Turkey is an Animal card.");
+        
+    }
+    
+    public static void energy(){
+        
+        int enery = 1;
+        
+    }
+    
+}
