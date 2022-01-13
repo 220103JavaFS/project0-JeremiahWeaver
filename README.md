@@ -1044,3 +1044,158 @@ public class Turkey extends Animal {
     }
     
 }
+
+package com.projectzero.User;
+
+public class GameMaster extends User{
+
+    public GameMaster() {
+
+        super();
+
+    }
+
+    public GameMaster(String passwordProtection, String gameBoard, int subtract, int addition, String cards, String gameRules){
+
+    }
+
+    public static void passwordProtection(){
+
+        System.out.println("I am game master I do not have get paid to ensure the Rules are followed so I will need top login.");
+
+    }
+
+    public static void gameBoard(){
+
+        System.out.println("The rules dictate that a game board have room for up to the types of player cards.  I must verify.");
+
+    }
+
+    public static void subtract(){
+
+        System.out.println("attack - defense = card winner I do that math.");
+
+    }
+
+    public static void addition(){
+
+        System.out.println("energy + card = card improved energy.");
+
+    }
+
+    public static void card(){
+
+        System.out.println("I do not use this function I only observe for fair play");
+
+    }
+
+    public static void gameRules(){
+
+        System.out.println("I know the rules forward and backwards I regulate that no player is cheating.");
+
+    }
+
+}
+
+package com.projectzero.User;
+
+public class Players extends User{
+
+    public Players() {
+
+        super();
+
+    }
+
+    public Players(String passwordProtection, String gameBoard, int subtract, int addition, String cards, String gameRules){
+
+    }
+    public static void passwordProtection(){
+
+        System.out.println("I am a player I am what the whole game is built around protect my password to login.");
+
+    }
+
+    public static void gameBoard() {
+
+        System.out.println("I need the board to be able to play my cards.");
+
+    }
+
+    public static void subtract() {
+
+        System.out.println("I need to be able to keep track of the subtraction of my cards attack vs defense.");
+
+    }
+
+    public static void addition(){
+
+        System.out.println("I need to be able to keep track if a card increases my energy how much more per turn I can do.");
+
+    }
+
+    public static void cards() {
+
+        System.out.println("I have a deck of cards to use against my foe my plan is to win.");
+
+    }
+
+    public static void gameRules(){
+
+        System.out.println("I must follow the game rule or there will be consequences.");
+
+    }
+
+}
+
+package com.projectzero.User;
+
+public class Audience extends User{
+
+    public Audience() {
+
+        super();
+
+    }
+
+    public Audience(String passwordProtection, String gameBoard, int subtract, int addition, String cards, String gameRules){
+
+    }
+
+    public static void passwordProtection(){
+
+        System.out.println("I paid to get onto this website I would like my payment info password secure please.");
+
+    }
+
+    public static void gameBoard(){
+
+        System.out.println("I can see the game board to be able support my favorite player.");
+
+    }
+
+    public static void subtract(){
+
+        System.out.print("I don't need to subtract I just want to watch the game securely.");
+
+    }
+
+    public static void addition(){
+
+        System.out.println("I don't need to add I just want to watch the game securely.");
+
+    }
+
+    public static void cards(){
+
+        System.out.println("Yes I have my own set of cards.  No I am not here to play I am here to watch.");
+
+    }
+
+    public static void gameRules(){
+
+        System.out.println("Yes I know the rules because I play for fun with my friends and knowing the rules helps me to enjoy watching the game even more.");
+
+    }
+
+}
