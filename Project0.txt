@@ -220,5 +220,295 @@ public interface CardDAO {
 
 }
 
+package com.projectzero.models;
+
+import java.util.Objects;
+
+public class Success {
+
+        private String playerLastName;
+        private String  playerPostion;
+        private String rookieTeam;
+        private boolean active;
+        private int superBowls;
+        private int proBowls;
+        private int hallOfFame;
+        private int playerNumber;
+
+        public Success() {
+
+        }
+
+        public Success(String playerLastName, String playerPostion, String rookieTeam, boolean active, int superBowls, int proBowls, int hallOfFame, int playerNumber) {
+
+            this.playerLastName = playerLastName;
+            this.playerPostion = playerPostion;
+            this.rookieTeam = rookieTeam;
+            this.active = active;
+            this.superBowls = superBowls;
+            this.proBowls = proBowls;
+            this.hallOfFame = hallOfFame;
+            this.playerNumber = playerNumber;
+
+        }
+
+        public String getPlayerLastName() {
+            return playerLastName;
+        }
+
+        public void setPlayerLastName(String playerLastName) {
+            this.playerLastName = playerLastName;
+        }
+
+        public String getPlayerPostion() {
+            return playerPostion;
+        }
+
+        public void setPlayerPostion(String playerPostion) {
+            this.playerPostion = playerPostion;
+        }
+
+        public String getRookieTeam() {
+            return rookieTeam;
+        }
+
+        public void setRookieTeam(String rookieTeam) {
+            this.rookieTeam = rookieTeam;
+        }
+
+        public boolean isActive() {
+            return active;
+        }
+
+        public void setActive(boolean active) {
+            this.active = active;
+        }
+
+        public int getSuperBowls() {
+            return superBowls;
+        }
+
+        public void setSuperBowls(int superBowls) {
+            this.superBowls = superBowls;
+        }
+
+        public int getProBowls() {
+            return proBowls;
+        }
+
+        public void setProBowls(int proBowls) {
+            this.proBowls = proBowls;
+        }
+
+        public int getHallOfFame() {
+            return hallOfFame;
+        }
+
+        public void setHallOfFame(int hallOfFame) {
+            this.hallOfFame = hallOfFame;
+        }
+
+        public int getPlayerNumber() {
+            return playerNumber;
+        }
+
+        public void setPlayerNumber(int playerNumber) {
+            this.playerNumber = playerNumber;
+        }
+
+        @Override
+        public boolean equals(Object o) {
+            if (this == o) return true;
+            if (o == null || getClass() != o.getClass()) return false;
+            Success success = (Success) o;
+            return active == success.active && superBowls == success.superBowls && proBowls == success.proBowls && hallOfFame == success.hallOfFame && playerNumber == success.playerNumber && Objects.equals(playerLastName, success.playerLastName) && Objects.equals(playerPostion, success.playerPostion) && Objects.equals(rookieTeam, success.rookieTeam);
+        }
+
+        @Override
+        public int hashCode() {
+            return Objects.hash(playerLastName, playerPostion, rookieTeam, active, superBowls, proBowls, hallOfFame, playerNumber);
+        }
+
+        @Override
+        public String toString() {
+            return "success{" +
+                    "playerLastName='" + playerLastName + '\'' +
+                    ", playerPostion='" + playerPostion + '\'' +
+                    ", rookieTeam='" + rookieTeam + '\'' +
+                    ", active=" + active +
+                    ", superBowls=" + superBowls +
+                    ", proBowls=" + proBowls +
+                    ", hallOfFame=" + hallOfFame +
+                    ", playerNumber=" + playerNumber +
+                    '}';
+        }
+
+}
+
+package com.projectzero.models;
+
+import java.util.Objects;
+
+public class Rookie {
+
+    private String playerLastName;
+    private int rookieNumber;
+    private String rookieTeam;
+    private int draftNumber;
+    private int rookieYear;
+
+    public Rookie() {
+
+    }
+
+    public Rookie(String playerLastName, int rookieNumber, String rookieTeam, int draftNumber, int rookieYear) {
+
+        this.playerLastName = playerLastName;
+        this.rookieNumber = rookieNumber;
+        this.rookieTeam = rookieTeam;
+        this.draftNumber = draftNumber;
+        this.rookieYear = rookieYear;
+
+    }
+
+    public String getPlayerLastName() {
+        return playerLastName;
+    }
+
+    public void setPlayerLastName(String playerLastName) {
+        this.playerLastName = playerLastName;
+    }
+
+    public int getRookieNumber() {
+        return rookieNumber;
+    }
+
+    public void setRookieNumber(int rookieNumber) {
+        this.rookieNumber = rookieNumber;
+    }
+
+    public String getRookieTeam() {
+        return rookieTeam;
+    }
+
+    public void setRookieTeam(String rookieTeam) {
+        this.rookieTeam = rookieTeam;
+    }
+
+    public int getDraftNumber() {
+        return draftNumber;
+    }
+
+    public void setDraftNumber(int draftNumber) {
+        this.draftNumber = draftNumber;
+    }
+
+    public int getRookieYear() {
+        return rookieYear;
+    }
+
+    public void setRookieYear(int rookieYear) {
+        this.rookieYear = rookieYear;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Rookie rookie = (Rookie) o;
+        return rookieNumber == rookie.rookieNumber && draftNumber == rookie.draftNumber && rookieYear == rookie.rookieYear && Objects.equals(playerLastName, rookie.playerLastName) && Objects.equals(rookieTeam, rookie.rookieTeam);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(playerLastName, rookieNumber, rookieTeam, draftNumber, rookieYear);
+    }
+
+    @Override
+    public String toString() {
+        return "Rookie{" +
+                "playerLastName='" + playerLastName + '\'' +
+                ", rookieNumber=" + rookieNumber +
+                ", rookieTeam='" + rookieTeam + '\'' +
+                ", draftNumber=" + draftNumber +
+                ", rookieYear=" + rookieYear +
+                '}';
+    }
+}
+
+package com.projectzero.models;
+
+import java.util.Objects;
+
+public class Madden {
+    
+    private String playerFirstName;
+    private String playerLastName;
+    private int yearsActive;
+    
+    public Madden(){
+        
+    }
+    
+    public Madden(String playerFirstName, String playerLastName, int yearsActive){
+        
+        this.playerFirstName = playerFirstName;
+        this.playerLastName = playerLastName;
+        this.yearsActive = yearsActive;
+        
+    }
+
+    public String getPlayerFirstName() {
+        return playerFirstName;
+    }
+
+    public void setPlayerFirstName(String playerFirstName) {
+        this.playerFirstName = playerFirstName;
+    }
+
+    public String getPlayerLastName() {
+        return playerLastName;
+    }
+
+    public void setPlayerLastName(String playerLastName) {
+        this.playerLastName = playerLastName;
+    }
+
+    public int getYearsActive() {
+        return yearsActive;
+    }
+
+    public void setYearsActive(int yearsActive) {
+        this.yearsActive = yearsActive;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Madden madden = (Madden) o;
+        return yearsActive == madden.yearsActive && Objects.equals(playerFirstName, madden.playerFirstName) && Objects.equals(playerLastName, madden.playerLastName);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(playerFirstName, playerLastName, yearsActive);
+    }
+
+    @Override
+    public String toString() {
+        return "Madden{" +
+                "playerFirstName='" + playerFirstName + '\'' +
+                ", playerLastName='" + playerLastName + '\'' +
+                ", yearsActive=" + yearsActive +
+                '}';
+    }
+    
+}
+
+
+
+
+
 
 
