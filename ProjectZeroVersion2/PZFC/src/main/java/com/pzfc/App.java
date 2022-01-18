@@ -3,7 +3,7 @@ package com.pzfc;
 import com.pzfc.controller.Controller;
 import io.javalin.Javalin;
 
-public class App {
+public class App{
 
     private static Javalin app;
 
@@ -20,4 +20,4 @@ public class App {
         }
     }
 }
-}
+

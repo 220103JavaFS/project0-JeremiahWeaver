@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface CardDAO {
 
-    List<Card> findall();
+    List<Card> findAll();
 
     Card findPlayer(int id);
 
