@@ -6,6 +6,12 @@ import java.util.List;
 
 public interface RookieDAO {
 
-    List<Rookie> findAll();
+    List<Rookie> findAllRookies();
+
+    List<Rookie> findRookieByID(int id);
+
+    boolean insertRookie(Rookie rook);
+
 
 }
+

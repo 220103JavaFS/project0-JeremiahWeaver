@@ -8,12 +8,5 @@ public interface CardDAO {
 
     List<Card> findAll();
 
-    Card findPlayer(int id);
-
-    boolean addPlayer(Card card);
-
-    boolean updatePlayer(Card card);
-
-    boolean deletePlayer(int id);
 
 }

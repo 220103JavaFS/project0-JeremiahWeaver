@@ -86,4 +86,7 @@ public class Rookie {
                 ", rookieYear=" + rookieYear +
                 '}';
     }
+
+    public void add(Rookie thisRook) {
+    }
 }

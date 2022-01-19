@@ -1,0 +1,124 @@
+Notes Day 12
+01/19/2022
+
+Bootstrap CSS Framework:
+	Why write your own CSS when you can steal someone else's?  Bootstrap
+is an opensource CSS framework that you can apply to your web pages to have
+pre-built styling.
+	Bootstrap takes a mobile first appoarch, so it is designed to display
+everything well on a mobile device and then scale that up for a larger
+device.  Bootstrap is reactive to the size of the viewport.
+	Bootstrap is class-based.  So to apply styling you need to give
+your HTML elements a particular class attributes.  Note that this means that
+to override the styling you need to use either your own class selector or
+an id selector.
+	There are two main ways to include Bootstrap in your webpage.
+		You can download and host it locally
+		you can link the hosted style sheet (the CDN) in the
+header of your webpage.
+	
+Bootstrap Grid System:
+	Bootstrap uses a layout called the grid system to define how
+the elements will appear on the page in relation to each other and the
+viewport size.  This allows for the reactive nature of Bootstrap.
+	Containers are the basic element.  Every element of the webpage that
+is displayed should be in a container.  There are two types:
+		Container - Has a fixed width that it will expand to.
+		Container-fluid - Will fill any viewport width.
+	Rows are horizontal slices of the container.  Rows have a base
+size of 12.
+	Columns are vertical sections of the Row with a dynamic width
+depending on the size they are given.  A row then can have a maximum
+of 12 columns.  Columns however can have a larger size then 1 which allows
+you to space out elements in relation to each other.  For instance if you
+want 3 columns to be equally spaced on the row you can give them all a size
+of 4.
+		e.g. class="col-sm-3" gives a column the default size small (this
+determines the minimum size the element will shrink to) with a size of
+3 of 1/4 of the row of the screen.
+
+Bootstrap Elements:
+	Bootstrap has extensive styling for various types of specific elements beyond
+its generic styling.  Tables, froms, buttons, and navbars all have particular
+styling classes.
+	Tables:
+	Forms:
+	Buttons:
+	There is a base "navbar" for navbars.
+
+JavaScript(JS)
+	It is not Java.
+	JavaScript is a high-level programming language generally used for
+front-end development.  It has built-in support with all web browsers.
+		It is possible to do server-side JS with NodeJS and plenty
+of applications do.
+	JS is multi-paradigm - it can do prodedural programming, functional programming,
+and some OOP.
+	JS is weakly and lossely typed.
+	The official language specification for JS are called ECMAScript.
+This is really only important to know when talking about versioning.
+Versions of JS are referred to as ES#
+		e.g. ES6 or ES2019.
+	HTML supports the use of JS with the <script> tag.  This allows you to
+put raw JS in your HTML document or much more often allows you link to a
+separate JS file that will be run.
+		Script tags can go in the head or the body of the document.
+However, generally it is best to load the elements of the page before your JS runs
+therefore, usually it is included at the bottom of the body.
+	JS was originally designed in a very short period of time. (The legend
+is that it took 10 days to write the pitch demo, but it still was only written
+in a matter of months).  This means that the language has some inherent quirks
+that resulted from this frantic development and have been maintained to
+this day mostly due to backwards compatibility issues.
+	JS is traditionally considered an interpreted language instead of
+a compiled one.
+	OPTIONAL: JavaScript memorey: https://dev.to/narottam04/how-javascript-works-visually-explained-269i
+	Video that talks about some JS quirks: https//www.destroyallsoftware.com/talks/wat
+
+JS Syntax:
+	Comments are the same as Java(// and /*)
+	JavaScripts literals (primitives) are your fixed values.  They can
+be numbers, strings, booleans, ect.
+	JS has keywords like other languages such as:
+		break,
+		catch,
+		do,
+		if,
+		else,
+		etc.
+	Control flow statements are generally the same as Java.  The exception
+will be there are two types of enhanced for-loops.
+	Variables are loosely typed so do not have a type declaration.
+	Semicolons end lines (although generally the browser will infer these
+if they are left off).
+	
+JS Variables:
+	Variables store values and use the "=" for assignments.
+		Variable names must start with a letter, an underscore,
+or a $.  They cannot start with numbers but can contain them.
+	There are three ways to declare variables in JS. (Note: let and const
+were added int ES6).
+		var - The older, default declaration.
+		let - newer and peferred declaration for mutable variables.
+		const - functions as let but can not be changed after
+assignment. (i.e. the same as a final variable in Java).
+	Scopes - There are three variable scopes in JS but var can only be scoped
+to two of them.
+		Global - This is the widest scope; the variable is visable
+throughout the whole script.
+		Functional - A variable that exists only within a function.
+		Block - The variable is only visible in a particular block
+of code like an if statement.  These blocks can be at the global level or in a
+function.  Only let and const can be blocked scoped.
+	There are 7 major datatypes in JS:
+		number - includes all numeric values: intergers and
+floating point numbers.
+		string - collection of characters.
+		boolean - true/false.
+		undefined - A variable has this type/value when it has not
+yet received assignement.
+		null - has no value.
+		object - objects in JS are simply key/value pairs.  The keys
+and values are defined within curly braces and separated by a colon.  The value
+of a key can be another object.  Object are not required to have a defined class.
+			e.g. let myObj={name"tim", eyeColor="hazel"};		

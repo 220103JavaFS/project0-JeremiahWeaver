@@ -9,30 +9,7 @@ public class CardServices {
 
     private CardDAO cDAO = new CardDAO() {
         @Override
-        public List<Card> findAll() {
-            return null;
-        }
-
-        @Override
-        public Card findPlayer(int id) {
-            return null;
-        }
-
-        @Override
-        public boolean addPlayer(Card card) {
-            return false;
-        }
-
-        @Override
-        public boolean updatePlayer(Card card) {
-            return false;
-        }
-
-        @Override
-        public boolean deletePlayer(int id) {return false;}
+        public List<Card> findAll() { return null;}
 
     };
-
-    public Card callCard(int id) {return cDAO.findPlayer(id);
-    }
 }
