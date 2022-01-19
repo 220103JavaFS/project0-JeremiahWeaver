@@ -10,6 +10,18 @@ public class RookieFinder {
     private int draftNumber;
     private int rookieYear;
 
+    public RookieFinder(){
+
+    }
+
+    public RookieFinder(String playerLastName, int rookieNumber, String rookieTeam, int draftNumber, int rookieYear) {
+        this.playerLastName = playerLastName;
+        this.rookieNumber = rookieNumber;
+        this.rookieTeam = rookieTeam;
+        this.draftNumber = draftNumber;
+        this.rookieYear = rookieYear;
+    }
+
     public String getPlayerLastName() {
         return playerLastName;
     }
