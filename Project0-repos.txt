@@ -1,0 +1,31 @@
+package com.projectzero.repos;
+
+import com.projectzero.models.Card;
+
+import java.util.List;
+
+public interface CardDAO {
+
+    List<Card> findall();
+    Card findPlayer(int id);
+    boolean addPlayer(Card card);
+    boolean updatePlayer(Card card);
+    boolean deletePlayer(int id);
+
+}
+
+package com.projectzero.repos;
+
+import com.projectzero.models.Collector;
+
+import java.util.List;
+
+public interface CollectorDAO {
+    
+    List<Collector> findAll();
+    Collector findByAllias(String allias);
+    boolean addCollector(Collector collector);
+    boolean addCard(Collector card);
+    boolean addCollection(Collector collection);
+}
+

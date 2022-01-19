@@ -1,0 +1,336 @@
+Note Day 11
+01/18/2022
+
+HTML - HyperText Markup Language
+	HTML is the standard laguage for designing webpages.  Browsers
+are designed to inherently display HTML as a webpage.
+	HTML as it's name implies is a markup language.  Markup languages are
+used to organize and display content in a particular way.  They have no computational
+or logical functionality so they are not programming languages.  This is why
+we refer to HTML pages as static.
+	HTML is very similar to XML and in fact at one point was a sublanguage
+of XML.
+	HyperText - This is a reference to the way HTML pages can be
+"linked together" with the use of hypermedia links.
+	HTML syntax is broken down into two subsets: Elements and Attributes.
+
+HTML Elements:
+	These provide the structure for the document.  They are defined
+by tags:
+		e.g. <div> this is a div </div>
+	You can have nested elements/tags in HTML but a nested element
+must be fully contained in the outer element.
+		<div>
+			<p> this will work </p>
+		</div>
+		<div>
+			<p> this will not work. </div> The paragraph must be fully contained in the div.
+		</p>
+
+	Elements themselves can be divided into two categories;
+		Block elements:  These elements will render in the browser
+as a "block" meaning the element will always take up the full width of the
+page it appears on.
+		Inline elements:  These take up one the width required
+to display, allowing other elements to be rendered on the same line.
+	Common HTML Elements:
+		<div> this is a division of the page.  Often it will be
+used to group elements and it itself will not have any of its own content.
+It is a block element.
+		<p> defines a paragraph.  This is a block element generally
+used to render text.
+		<span> standard inline element.
+		<br> line break, it's a block element that does not need
+a closing tag and should not have any content.
+		<img> displays an image. (Does not need a closing tag).
+		<h1> through <h6> these are header tags.  1 is the largest
+and 6 is the smallest.
+		<a> anchor tag used to make a hyperlink.
+
+HTML Attributes:
+	Attributes are metadata that describe the elements.
+		e.g. the img tag needs to know what image its supposed
+to display so it will use a "src" attribute to determine that information:
+<imag src="www.mycoolimage.com/catpic">
+	Attributes are defined in key/value pairs.  The name of the attribute
+is a key then the value is given as a string after the equals sign.
+	Global attributes are those that can be applied to any tag. some include:
+		id - unique identifier for the element.
+		class - allows for grouping similar or related elements.
+		hidden - boolean value that decides if an element is
+displayed or not.
+		lang - allows you to specify the language/character set.
+		style - allows for CSS styling.
+		Title
+	Some elements can have specific attributes as well like the src
+attribute for images.
+
+Doctype and root tage:
+	<!DOCTYPE html> this is the doctype declatartion.  If informs the
+browser what type of document it should render; in this case an HTML 5
+document.  It was introduced in HTML 5.  It does not have a closing tag.
+It should bethe first line of your HTML document.
+	The root tag of HTML is <html>.  All elements of the page must be
+nested inside the root tag.
+		After the root tag, the document "branches" into the <head>
+and <body> elements, which will themselves branch as necessary.
+			<head> gives metadata about the page as a whole.
+				e.g. <title> in the head will set the title
+to be displayed on the window or tab.
+			<body> includes all the elements that are displayed
+by the browser.
+	The above listed tags are the required tags for an HTML 5 document.
+
+HTML lists:
+	HTML as support for listing items.
+	there are two types of lists.
+		Ordered list - Hava a progression like 1,2,3...
+		Unordered list - no progression, generally they use some
+typ of bullet point.
+	Ordered lists use the <ol> tag fro those elements
+	Unordered list use the <ul> tag.
+	<li> tags are used for each element to be displayed in the list
+	List of either type can be nested inside each other.
+
+HTML Tables
+	Tables are an easy way of organizing/structing an HTML page.  Before
+modern styling it was often best practice to put the entire page or 
+majority of the page you were building into a table.  With CSS3 and other
+tools that is no longer the case.
+	Tables are declared with the <table> tag.
+	Tables can have header, body, and footer rows.
+		<thead> indicates you header for the table.
+			<tr> indicates a row.
+				<th> indicates a value in a cell in that row.
+		<tbody> indicates the body of the table
+			<tr> indicates a row.
+				<td> designates a single cell's data.
+		<tfoot> indicates a footer.
+			<tr>
+				<tf>
+
+HTML Forms:
+	HTML has built in functionality for form.  Forms take inputs and
+then submits them to a server or other handler to process them.
+	Note: while HTML has this functionality.  It is not particularly
+robust nor flexible.  Thus, generally we will be using JavaScript to
+handle our forms instead of the default HTML functionality.
+	Forms are declared wiht the <form> tag.
+	Inputs inside a form are generally <input> elements.
+	Inputs can be labeled with a <label> element.
+	Common input elements:
+		Text field
+		Password field - text field but the inputs are hidden on the
+screen when entered.
+		Checkboxes
+		Select boxes - Drop down menu
+		Radio buttons - Select a single option form a list.
+		File select boxes - Allows users to upload a file.
+		Text area - Multi-line text field.  It has its own element
+tag, it does not use the <input> tag
+	There are also reset and submit buttons that let you clear all the
+inputs or send the data respectively.
+	Attributes used on forms:
+		Action - on the form tag, tells the browser where or how
+to process the form data.
+		Target - on the form tag, decides where the result of the form
+being processed will open. (This can be another window/tab or the same one).
+		Method - On the form tag, determines the HTTP method/verb
+used to send the data.
+		Name - On each input field, this allows th data to be labeled
+when sent.
+		Value - Initial or default value.
+		Placeholder - This is a hint that describes the typ of input
+expected.  This is generally rendered as gray text before the input box is selected.
+		Required - This field must have an input for the form to 
+be submitted.
+		Min and Max - give the minimum and/or maximum values for an input field.
+
+HTML 5 Features:
+	DOCTYPE was added in HTML 5
+	Character encoding for non-Latin alphabet languages was added.
+	Semantic Elements - HTML 5 added many semantic elements beyond
+what had already existed.
+		Semantic Elements are elements whose tag names are
+descriptive of their use.  They may or may not have specific functionality.
+			<section>
+			<aticle>
+			<header>
+			<footer>
+			<summary>
+		Semantic Elements can be used to help others understand
+what your element is supposed to be doing.  It also allows accessibility
+programs to more easily understand how they interpret you website.
+	Audio and Video - Natively embedded audio and video were added
+		<audio> will have an audio element like an mp3, ogg, wav
+etc. file to play on the page.
+		<video> Similar to audio but has things like MP4, webM, ogg etc.
+	Form validation - added the ability in forms to have required fields
+and validation like min/max.
+
+CSS - Cascading Style Sheet:
+	CSS is a language for styling how HTML documents are displayed
+by a browser.
+	It specifies rules for the layout appearance of the HTML elements
+	CSS uses key/value pairs to indicate the styling that should be
+applied.  Keys identify the category of styling and values provide the
+exact style that is desired.
+		The key "color" determines the text color while "blue"
+as a value will make the text color blue specifically.
+	CSS is broken down into selectors and declarations:
+		Selectors: define(selects) the HTML element(s) to style.
+		Declaration: key/value pair that define what styling to apply.
+
+CSS Box Model:
+	CSS treats every HTML elements in the document as a box with
+4 regoins that can all be indepently styled.
+	From inner to out the regions are:
+		Content - the actual infromation being displayed by the
+element.
+		Padding - The space between the content and the border.
+		Border - the space reserved for creating a border around
+the element.
+		Margin - The space between the border of this element and the
+margin of any other element around it.
+	A good example can be found here:
+	https://upload.wikimedia.org/wikipedia/commons/e/ed/Box-model.svg
+
+Declaring CSS in an HTML document:
+	There are three places that CSS can be declared:
+		External Style Sheet (This is a sparate document that is
+linked into the HTML document).
+		Internally in the head of the HTML document.  Uses the
+<style> tag.
+		Inline as an attribute of the element itself;
+			e.g. <p style="color:blue"> This text would be blue</p>
+CSS properties:
+	There are many, many properties that can be styled with CSS.  The below are
+just an example of some of the most commonly used.
+	Display - determines the display behavior: inline or block.
+	Position - Defines where the element is displayed on the page.
+		Static - normal
+		Relative - can change based on the location of other elements.
+		Absolute - Elements' boxes are placed in an absolute
+position on the page and will not move reactively.
+		Fixed - The elements' boxes are placed in a fixed location
+on the window and are always visible even as the user scrolls the page.
+	Color - allows you to change the text color.  Like all color type
+options you have multiple choices for types of values.  This includes simple names
+(red), rgb values, hexadecimal values, or hsl values.
+	Background color
+	Text align - Right, left, justified or center.
+	Border:
+		Border width
+		Border style:
+			Dashed dotted etc.
+		Border color
+	Padding/Margin
+		These are generally used for spacing.  They can take up
+to 4 values representing their width on different side of the conten/border.
+These size values can be relative or absolute.
+			1 number = all four sides have the same width of
+the size defined.
+				{padding:7px;}
+			2 numbers = the first number is the to/bottom
+width and second is the right/left width.
+				{padding:7px, 15px;}
+			3 numbers = the first is the top, the second is
+the right and left, the third is the bottom
+				{padding: 7px, 15px, 22px;}
+			4 numbers = first is top, second is right, third
+is bottom, and fourth is left.
+				{padding: 1px, 15px, 22px, 5px;}
+
+CSS Selctors:
+	Selectors are used in the head and external style sheets to indicate
+the elcement(s) that are having the style applied.
+	Elements Selects: This will select all elements of that type.  These
+are simply the tage name.
+	<stly>
+		p{
+			text-align:center;
+			color:blue;
+		}
+	</style>
+	Id Selcetor - Selects a single element by its id.  Uses the # to select.
+	<stly>
+		#para{
+			text-align:center;
+			color:blue;
+		}
+	</style>
+	Class selectors- 
+	<stly>
+		p.maClass{
+			text-align:center;
+			color:blue;
+		}
+	</style>
+	Universal Selector - Selects all elements. Uses the *.
+	<stly>
+		*{
+			text-align:center;
+			color:blue;
+		}
+	</style>
+	Grouping Selectors - you can use multiple selectors with the same
+block of styling by separating them with a comma.
+	<stly>
+		p,#myId{
+			text-align:center;
+			color:blue;
+		}
+	</style>
+	Arrtribute Selector - Allows for styling elements with a particular
+attribute.  This can be just anything that sets that attribute
+	Child Selectors - Selects all elements of a certain type that are
+nested under an element of a certian type.  Uses the > sign.
+	<style>
+		div>p{
+			text-align:center;
+			color:blue;
+		}
+	</style>
+	Descendent Selectorts - Like a child but doesn't have to be a 
+direct child, can be nested under multiple elements as long as it is within
+the declared element somehow. Uses a space character
+	<style>
+		div p{
+			text-align:center;
+			color:blue;
+		}
+	</style>
+	Sibling Selector - Selects an element of the type declared that
+is on the same level as the other element type declared. Uses the ~
+	<stly>
+		div~p{
+			text-align:center;
+			color:blue;
+		}
+	</style>
+	Adjacent Sibling Selector - The same as sibling except the selected
+element must immediately follow the other element at that leve.  Uses
+the+.
+	<stly>
+		div+p{
+			text-align:center;
+			color:blue;
+		}
+	</style>
+
+CSS conflicts:
+	Conflicts in CSS are resolved by specificity and proximity.
+The more specific the selector and the closer the declaration to the element
+the higher priority the styling is given.
+		Inline stryling wins all conflicts.
+		Id wins over everything else.
+		Class wins over anything but Id.
+		Element has the lowest priority.
+		If secificity/ proximity don't resolve the conflicts then
+the last declared styling is applied.
+
+CSS3:
+	The newest version of CSS.  It implements new features to help with syling
+adaptive web pages specifically for mobile devices.  This includes 
+flexbox
+	https://flexboxfroggy.com/

@@ -33,4 +33,6 @@ public class CardServices {
 
     };
 
+    public Card callCard(int id) {return cDAO.findPlayer(id);
+    }
 }

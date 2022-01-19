@@ -7,9 +7,7 @@ import java.util.List;
 public class CardDAOImpl implements CardDAO {
 
     @Override
-    public List<Card> findall() {
-        return null;
-    }
+    public List<Card> findAll() { return null; }
 
     @Override
     public Card findPlayer(int id) {

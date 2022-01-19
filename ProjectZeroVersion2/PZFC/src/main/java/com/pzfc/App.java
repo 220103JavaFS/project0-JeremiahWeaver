@@ -1,16 +1,16 @@
 package com.pzfc;
 
-import com.pzfc.controller.Controller;
+import com.pzfc.controller.*;
 import io.javalin.Javalin;
 
 public class App{
 
     private static Javalin app;
 
-    public static void main(String[] argd) {
+    public static void main(String[] args) {
 
         app = Javalin.create();
-        configure();
+        configure(new CardController(), new CollectionController(), new CollectorController(), new MaddenController(), new RookieController(), new SuccessController());
         app.start();
     }
 
