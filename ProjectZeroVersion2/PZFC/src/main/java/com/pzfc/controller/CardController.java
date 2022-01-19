@@ -21,6 +21,12 @@ public class CardController implements Controller{
         }
     };
 
+    Handler getPlayer = (ctx) -> {
+        if(ctx.req.getSession(false)!=null){
+            String
+        }
+    }
+
     @Override
     public void addRoutes(Javalin app) {
         
