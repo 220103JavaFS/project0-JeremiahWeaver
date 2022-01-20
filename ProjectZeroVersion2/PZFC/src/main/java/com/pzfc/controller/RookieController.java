@@ -1,5 +1,6 @@
 package com.pzfc.controller;
 
+import com.pzfc.models.Rookie;
 import com.pzfc.services.RookieServices;
 import io.javalin.Javalin;
 import io.javalin.http.Handler;
@@ -10,7 +11,29 @@ public class RookieController implements Controller{
 
     Handler getRookie = ctx->{
         if(ctx.req.getSession(false)!=null) {
-            ctx.json(rookieServices.findAll());
+            ctx.json(rookieServices.findAllRookies());
+            ctx.status(200);
+        }else{
+            ctx.status(400);
+        }
+    };
+
+    private int id;
+
+    Handler getRookies = ctx -> {
+        if(ctx.req.getSession(false)!=null) {
+            ctx.json(rookieServices.findRookieById(id));
+            ctx.status(200);
+        }else{
+            ctx.status(400);
+        }
+    };
+
+    private Rookie rookie = new Rookie();
+
+    Handler addRookie = ctx -> {
+        if(ctx.req.getSession(false)!=null) {
+            ctx.json(rookieServices.insertRookie(rookie));
             ctx.status(200);
         }else{
             ctx.status(400);
@@ -19,6 +42,8 @@ public class RookieController implements Controller{
 
     @Override
     public void addRoutes(Javalin app) {
-
+        app.get("/rookie", getRookie);
+        app.get("/rookies", getRookies);
+        app.post("/rookie", addRookie);
     }
 }

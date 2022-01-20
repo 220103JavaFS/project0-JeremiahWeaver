@@ -121,4 +121,136 @@ yet received assignement.
 		object - objects in JS are simply key/value pairs.  The keys
 and values are defined within curly braces and separated by a colon.  The value
 of a key can be another object.  Object are not required to have a defined class.
-			e.g. let myObj={name"tim", eyeColor="hazel"};		
+			e.g. let myObj={name:"tim", eyeColor:"hazel"};
+		Symbol - added in ES6 and isn't commonly used.
+	Other datatypes or sub-datatypes includes:
+		BigInt - Is used to hold number integer values to large
+to be stored in a number.
+		NaN(Not a Number) - is a value type of a number.  This is returned
+instead of throwing an error when a mathematical operation is not possible.
+		infinity and -infinity are numeric values in JS.  They are most
+often seen when you divide by 0.
+		Object sub-types:
+			Arrays - These are objects with predefined keys that are the
+indices.  They are not restricted by type and have a mutable length.  Arrays are
+basically the only built-in data structure in JS.
+			Dates are type of object that hold a specific date
+			Functions are technically objects.  This allows them to
+be passed as parameters like Lambdas in Java.
+				Classes are technically special funtions in JS.
+They wre added later in JS.
+		There is a "typeof" operator that can be used to check the type
+of the value when necessary.
+
+Type Coercion:
+	This is the process of converting values between datatypes.  JS does
+this often implicitly
+	You can do this explicitly in JS.  The syntax is:Number("3") to make a
+string a number or string (123) would make "123".
+	The most common place where coercion happens is in equality testing in JS.
+Also it will happen when using the + operator which different types.
+
+JS Operators:
+	Comparison operators are almost all the same as Java (>, <, >=, <=,
+!=) except for == and ===.
+		=== will take types into consideration for equality.
+== will try type coercion to see if two variables are the same just as
+different data types.
+			e.g 6==="6" is false but 6=="6" is true.
+	Otherwise the assignment(=, += ect) logical(&& || etc) arithmetic
+(+,/,%,++,--) ternary(a?b:c) operators are all the same as Java.
+
+Truthy/Falsey values:
+	In JS any expression or value can be evaluated as a boolean.
+We use the terms truthy and falsey to indicate what things will be evaluated
+as
+	There are 6 values that return false:
+		An empty string "",''
+		undefined
+		null
+		NaN
+		0
+		false
+	Everything else evaluates as true.
+
+JS Functions:
+	A function is a reusable set of instructions that can be called
+anywhere within the scope that the function was declated in. Functions are
+hoisted sto they cannot be block scoped.
+		Function and vars have their declarations raised to the top
+of the scope (global or function) when the script is run.  This does not 
+however also hoist assignment.
+	You can declare a function with the function keyword.  You can then
+also choose to give it a name. Functions are objects so they can also be assigned
+to variables.  Functions can also be declared to take any number of
+inputs
+		Functions do not require names.  However, if you want to use an anonymous
+(nameless) function you will need to assign it to a variable that can be called.
+	Functions can return values with a returns keyword but do not require declaring
+a return type.
+	Arrow functions are generally "one time use" functions declared inline
+as anonymous functions.
+		They are called arrow functions because you use the "=>"
+to make an arrow syntactically:
+			e.g. (inp!)=>{console.log("I'm an arrow function");}
+		Arrow functions can be passed into other functions or stored
+in variables.
+	A function passed into another function as an input and then called by
+the function it was passed into are called "callback" functions.
+		This is the core idea of functional programming.  The ability
+to pass functions around in other functions to expand functionality is
+the basis for the whole paradigm.
+	Closures - This is an old way of achieving encapsulation in Js.  It
+requires a nested function to work.
+		The outer function will define some values/variables.  The
+inner function since it is scoped to the outer function will be able to read
+those variables.  the outer function then returns the inner function.  At that point,
+there is no way for the inner function to change the values of the outer function,
+essentially making them constanct.
+		Const and access modifiers have made this much less common as
+a design choice in modern JS.
+
+This keyword:
+	In JS this can mean different things depending on where it is used.
+	"this" in no other particular context will refer to the "Global Object".
+(This is the "window" object).
+	"this" in event handlers refers to the HTML element that receives the
+event.
+		e.g.<button onclick="this.style.backgroundColor='green'"> click here to
+turn the button green. </button> this refers to the button itself.
+	"this" in Object Method Binding (generally a constructor for a class)
+refers to the object like it does in Java.
+		e.g. this.name=name;
+	In functions "this" can have different meanings depending on the type
+of function it is (if it used the function keyword or is an arrow function).
+
+Strict mode:
+	Declaring simply "use strict" at the top of a JS script will force
+the script run in "strict mode" that was designed to make JS a bit less quirky.
+	Strict mode will not let you call a variable before it is declared in
+the script.  Also, it will not let you use keywords that are not reserve
+words as variable/function names.  There are some other edge case effects.
+	Strict mode was added in ES5.
+
+Template Literals:
+	In JS instead of just concatenating strings you have the option to 
+use template literals that are declared with backticks`...`.
+	The template literal allows you to embed programmatic expressions
+or variables into the string.
+		e.g. `Hi my name is ${name}.` will insert whatever value is
+in the variable name into the string.
+		Also programmatically
+			x=5
+			y=3
+			let results = `the product of ${X} and ${Y} is ${X*Y}.`
+result then holds "The product of 5 and 3 is 15."
+
+For-in/for-of loops:
+	There are two special for loops, on generally for arrays and one 
+for objects.
+	For-in: iterates over and object's keys:
+		let person = {name ="mike", age=15}
+		for(let key in person){console.log(person[key]0;} // this prints mike and 15.
+	For-of: iterates over the values in an array.
+		let arr=["mike", 12, true];
+		for(let value of arr){console.log(value);)} //prints mike 12 true.

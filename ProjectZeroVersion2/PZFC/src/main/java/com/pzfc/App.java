@@ -10,7 +10,7 @@ public class App{
     public static void main(String[] args) {
 
         app = Javalin.create();
-        configure(new CardController(), new CollectionController(), new CollectorController(), new MaddenController(), new RookieController(), new SuccessController());
+        configure(new CardController(), new CollectionController(), new CollectorController(), new MaddenController(), new RookieController(), new SuccessController(), new MaddenOverPricedController(), new RookieFinderController(), new SignedController());
         app.start();
     }
 
