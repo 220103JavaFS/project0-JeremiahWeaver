@@ -3,10 +3,7 @@ package com.pzfc.repo;
 import com.pzfc.models.Rookie;
 import com.pzfc.utls.ConnectionUtil;
 
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,7 +12,7 @@ public class RookieDAOImpl implements RookieDAO {
     public List<Rookie> findRookieByID(int id) {
         List<Rookie> findRookie = findAllRookies();
         try (Connection connect = ConnectionUtil.getConnection()) {
-            String sql = "SELECT * FROM rookie;";
+            String sql = "SELECT * FROM rookie WHERE player_last_name = ?;";
 
             Statement statement = connect.createStatement();
 
@@ -49,26 +46,20 @@ public class RookieDAOImpl implements RookieDAO {
         Rookie rookie = new Rookie();
 
         try (Connection connect = ConnectionUtil.getConnection()) {
-        String sql = "SELECT * FROM rookie;";
+        String sql = "INSERT INTO rookie (player_last_name, rookie_number, rookie_team, draft_number, rookie_year VALUES (?,?,?,?,?);";
 
-        Statement statement = connect.createStatement();
+       PreparedStatement statement = connect.prepareStatement(sql);
 
-        ResultSet results = statement.executeQuery(sql);
+        int count = 0;
+        statement.setString(++count, rookie.getPlayerLastName());
+        statement.setInt(++count, rookie.getRookieNumber());
+        statement.setString(++count, rookie.getRookieTeam());
+        statement.setInt(++count, rookie.getDraftNumber());
+        statement.setInt(++count, rookie.getRookieYear());
 
-        List<Rookie> list = new ArrayList<>();
+            statement.execute();
 
-        while (results.next()) {
-
-            String player_last_name = results.getString("player_last_name");
-            int rookie_number = results.getInt("rookie_number");
-            String rookie_team = results.getString("rookie_team");
-            int draft_number = results.getInt("draft_number");
-            int rookie_year = results.getInt("rookie_year");
-
-            Rookie thisRook = new Rookie();
-            rookie.add(thisRook);
-
-        }
+            return true;
 
     } catch (SQLException e) {
         e.printStackTrace();
@@ -81,7 +72,7 @@ public class RookieDAOImpl implements RookieDAO {
         List<Rookie> rookieList = new ArrayList<>();
 
         try (Connection connect = ConnectionUtil.getConnection()) {
-            String sql = "SELECT * FROM rookie;";
+            String sql = "SELECT * FROM rookie WHERE rookie_number = ?;";
 
             Statement statement = connect.createStatement();
 
