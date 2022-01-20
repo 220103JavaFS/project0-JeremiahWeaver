@@ -12,7 +12,7 @@ public class RookieDAOImpl implements RookieDAO {
     public List<Rookie> findRookieByID(int id) {
         List<Rookie> findRookie = findAllRookies();
         try (Connection connect = ConnectionUtil.getConnection()) {
-            String sql = "SELECT * FROM rookie WHERE player_last_name = ?;";
+            String sql = "SELECT * FROM rookie;";
 
             Statement statement = connect.createStatement();
 
@@ -46,7 +46,7 @@ public class RookieDAOImpl implements RookieDAO {
         Rookie rookie = new Rookie();
 
         try (Connection connect = ConnectionUtil.getConnection()) {
-        String sql = "INSERT INTO rookie (player_last_name, rookie_number, rookie_team, draft_number, rookie_year VALUES (?,?,?,?,?);";
+        String sql = "INSERT INTO rookie (player_last_name, rookie_number, rookie_team, draft_number, rookie_year VALUES = (?,?,?,?,?);";
 
        PreparedStatement statement = connect.prepareStatement(sql);
 
@@ -72,7 +72,7 @@ public class RookieDAOImpl implements RookieDAO {
         List<Rookie> rookieList = new ArrayList<>();
 
         try (Connection connect = ConnectionUtil.getConnection()) {
-            String sql = "SELECT * FROM rookie WHERE rookie_number = ?;";
+            String sql = "SELECT * FROM rookie WHERE = rookie_number;";
 
             Statement statement = connect.createStatement();
 

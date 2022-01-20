@@ -14,7 +14,7 @@ public class RookieController implements Controller{
             ctx.json(rookieServices.findAllRookies());
             ctx.status(200);
         }else{
-            ctx.status(400);
+            ctx.status(401);
         }
     };
 
@@ -25,7 +25,7 @@ public class RookieController implements Controller{
             ctx.json(rookieServices.findRookieById(id));
             ctx.status(200);
         }else{
-            ctx.status(400);
+            ctx.status(403);
         }
     };
 

@@ -15,7 +15,7 @@ public class ConnectionUtil {
 
         String url = "jdbc:postgresql:database-1.cv5xhzgqb1is.us-east-1.rds.amazonaws.com:5432";
         String username = "DBTCG";
-        String password = System.getenv("var-name");
+        String password = "";
 
         return DriverManager.getConnection(url, username, password);
     }
